@@ -50,3 +50,47 @@ body{
   background: rgb(20, 155, 238);
   color: white;
  }
+
+.user-todo-container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.user-todo-list{
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo{
+  margin: 1rem;
+  background-color: #ffffff;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo li{
+  flex: 1;
+}
+
+.complete-btn, .trash-btn{
+  padding: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.complete-btn{
+  background: rgb(6, 151, 18);
+  color: white;
+}
+
+.trash-btn{
+  background: rgb(250, 38, 38);
+  color: white;
+}
+
+.todo-item{
+  padding: 0rem 0.5rem;
+}

@@ -94,3 +94,7 @@ body{
 .todo-item{
   padding: 0rem 0.5rem;
 }
+
+.fa-check, .fa-trash{
+  pointer-events: none;
+}

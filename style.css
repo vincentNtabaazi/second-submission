@@ -32,11 +32,18 @@ body{
   background: white;
  }
 
+ form input{
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+ }
+
  form button{
   color: rgb(20, 155, 238);
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
  }
 
  form button:hover{

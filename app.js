@@ -30,9 +30,17 @@ function addTodo(event){
 }
 
 function deleteCheck(e){
-  const delTodo = e.target;
-  if(delTodo.classList[0] === "trash-btn"){
-  const actualdelTodo = delTodo.parentElement;
+  const actionOnTodo = e.target;
+  if(actionOnTodo.classList[0] === "trash-btn"){
+  const actualdelTodo = actionOnTodo.parentElement;
+  actualdelTodo.classList.add("explode-div");
+  actualdelTodo.addEventListener('animationend', function() {
   actualdelTodo.remove();
-  }
+});
 }
+  }
+
+  if(actionOnTodo.classList[0] === "complete-btn"){
+    const completedtodo = actionOnTodo.parentElement;
+    completedtodo.classList.toggle("completed"); 
+  }

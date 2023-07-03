@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+.myProgress {
+  width: 60%;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-left: 20%;
+}
+
+.myBar {
+  width: 0%;
+  height: 20px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+
+}
+
 body{
   /* background: radial-gradient(circle, #e9f764 8%, transparent 11%),radial-gradient(circle at bottom left, #e9f764 5%, transparent 6%),radial-gradient(circle at bottom right, #e9f764 5%, transparent 6%),radial-gradient(circle at top left, #e9f764 5%, transparent 6%),radial-gradient(circle at top right, #e9f764 5%, transparent 6%); */
   background-size: 2em 2em;

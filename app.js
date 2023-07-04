@@ -30,6 +30,7 @@ function addTodo(event) {
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
   todoList.appendChild(todoDiv);
+  reConsider()
   todoInput.value = "";
 }
 
@@ -41,6 +42,7 @@ function deleteCheck(e) {
     removeLocalTodos(actualdelTodo);
     actualdelTodo.addEventListener('animationend', function () {
       actualdelTodo.remove();
+      checkDeletedStatus(actualdelTodo);
     });
   }
   if (actionOnTodo.classList[0] === "complete-btn") {
@@ -79,7 +81,6 @@ function progressBar2(e) {
       } else {
         elem.style.width = width + "%";
         elem.innerHTML = width + "%";
-
       }
     }
    } 
@@ -132,5 +133,44 @@ function removeLocalTodos(todo){
   const todoIndex = todo.children[0].innerText;
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem('todos', JSON.stringify(todos));
-  console.log(todo);
+  console.log(todo); 
+}
+
+function checkDeletedStatus(todo) {
+  const todoClasses = Array.from(todo.classList);
+  if (todoClasses.includes('completed')){
+    reConsider()
+  } else {
+    reConsider()
+  }
+}
+
+function reConsider(e) {
+  var completed = 0;
+  var incomplete = 0;
+  var unorderedList = document.getElementById('your-list-id');
+  var divElements = unorderedList.getElementsByTagName('div');
+  for (var i = 0; i < divElements.length; i++) {
+    var div = divElements[i];
+    var className = div.className;
+    if (className === "todo") {
+      incomplete++;
+    } else {
+      completed++;
+    }
+  }
+  var result = completed / (incomplete + completed) * 100
+  var roundedNumber = result.toFixed(0);
+  console.log(roundedNumber)
+  var elem = document.getElementById("myBar2");
+    width = roundedNumber;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width > 100) {
+        clearInterval(id);
+      } else {
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
+    }
 }

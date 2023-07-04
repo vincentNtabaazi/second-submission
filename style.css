@@ -92,6 +92,7 @@ body{
 .user-todo-list{
   min-width: 30%;
   list-style: none;
+  transition: all 0.7s ease;
 }
 
 .todo{

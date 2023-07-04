@@ -53,15 +53,22 @@ body{
  form input{
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-right: 10px;
  }
 
  form button{
+  padding-left: 5px;
+  padding-right: 5px;
   color: rgb(20, 155, 238);
-  background: white;
+  background: #c4c3c7;
   cursor: pointer;
   transition: all 0.3s ease;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
  }
 
  form button:hover{
@@ -73,6 +80,13 @@ body{
   display: flex;
   justify-content: center;
   align-items:center;
+}
+
+.user-todo{
+  font-size: 15px;
+  height: 40px;
+  width: 300px;
+  text-align: center;
 }
 
 .user-todo-list{

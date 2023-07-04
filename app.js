@@ -162,6 +162,11 @@ function reConsider(e) {
   var result = completed / (incomplete + completed) * 100
   var roundedNumber = result.toFixed(0);
   console.log(roundedNumber)
+  if (roundedNumber === "NaN"){
+    roundedNumber = 0;
+  } else {
+    roundedNumber = roundedNumber
+  }
   var elem = document.getElementById("myBar2");
     width = roundedNumber;
     var id = setInterval(frame, 10);

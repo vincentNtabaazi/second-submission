@@ -43,7 +43,7 @@ function deleteCheck(e) {
     removeLocalTodos(actualdelTodo);
     actualdelTodo.addEventListener('animationend', function () {
       actualdelTodo.remove();
-      checkDeletedStatus(actualdelTodo);
+      reConsider()
     });
   }
   if (actionOnTodo.classList[0] === "complete-btn") {
@@ -57,7 +57,6 @@ function progressBar2(e) {
   var completed = 0;
   var incomplete = 0;
   if (actionOnTodo.classList[0] === "complete-btn") {
-
     var unorderedList = document.getElementById('your-list-id');
     var divElements = unorderedList.getElementsByTagName('div');
     for (var i = 0; i < divElements.length; i++) {
@@ -180,3 +179,4 @@ function reConsider(e) {
       }
     }
 }
+ 
